@@ -2,6 +2,8 @@ package com.javatpoint;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController 
@@ -17,4 +19,11 @@ List<Product> products = productService.findAll();
 //returns the product list
 return products;
 }
+
+@GetMapping(value = "/products/{id}")
+public Product getProductById(@PathVariable int id) {
+    Product product = productService.findByProductId(id);
+    return product;
+}
+
 }

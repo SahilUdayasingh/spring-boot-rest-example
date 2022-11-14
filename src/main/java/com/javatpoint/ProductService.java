@@ -20,4 +20,14 @@ products.add(new Product(105, "Refrigerator ", "12WP9087", 10000.00, 4));
 //returns a list of product
 return products;
 }
+
+@Override
+public Product findByProductId(int id) {
+    List<Product> products = findAll();
+    Product product = products.stream()
+                    .filter(t -> (id == t.getId()))
+                    .findFirst()
+                    .orElse(null);
+    return product;
+}
 }
