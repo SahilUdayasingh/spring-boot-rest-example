@@ -1,25 +1,25 @@
 package com.javatpoint;
-public class Product 
+public class Airplane 
 {
 private int id;
 private String pname;
 private String batchno;
 private double price;
-private int noofproduct;
+private int noOfAirplane;
 //default constructor
-public Product()
+public Airplane()
 {
 	
 }
 //constructor using fields
-public Product(int id, String pname, String batchno, double price, int noofproduct) 
+public Airplane(int id, String pname, String batchno, double price, int noOfAirplane) 
 {
 super();
 this.id = id;
 this.pname = pname;
 this.batchno = batchno;
 this.price = price;
-this.noofproduct = noofproduct;
+this.noOfAirplane = noOfAirplane;
 }
 //getters and setters
 public int getId() 
@@ -54,12 +54,12 @@ public void setPrice(double price)
 {
 this.price = price;
 }
-public int getNoofproduct() 
+public int getNoofAirplane() 
 {
-return noofproduct;
+return noOfAirplane;
 }
-public void setNoofproduct(int noofproduct) 
+public void setNoofproduct(int noOfAirplane) 
 {
-this.noofproduct = noofproduct;
+this.noOfAirplane = noOfAirplane;
 }
 }
